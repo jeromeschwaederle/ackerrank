@@ -5,10 +5,10 @@ const arr = [
   3, 70, 95, 33, 46, 44, 9, 69, 48, 33, 60, 65, 16, 82, 67, 61, 32, 21, 79, 75, 75, 13, 87, 70, 33,
 ];
 
-function countingSort(arr) {
+const countingSort = arr => {
   const countingArr = new Array(100).fill(0);
   arr.map(v => void countingArr[v]++);
   return countingArr;
-}
+};
 
 console.log(countingSort(arr));
