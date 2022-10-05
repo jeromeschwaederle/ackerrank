@@ -1,6 +1,6 @@
 function primeFactors(ofThisNumber) {
   if (isPrime(ofThisNumber)) return `${ofThisNumber} is a prime number.`;
-  const potentialFactors = returnPrimeList(Math.sqrt(ofThisNumber));
+  const potentialFactors = returnPrimeArray(Math.sqrt(ofThisNumber));
   const factors = {};
 
   for (let prime of potentialFactors)
@@ -19,7 +19,7 @@ function primeFactors(ofThisNumber) {
   return returnValue.trim().split(" ").join(" x ");
 }
 
-function returnPrimeList(untilThisNumber) {
+function returnPrimeArray(untilThisNumber) {
   if (untilThisNumber <= 1) return [];
   const primes = [2];
   if (untilThisNumber === 2) return primes;
@@ -36,4 +36,4 @@ function isPrime(integer) {
   return true;
 }
 
-console.log(primeFactors(123456789123));
+console.log(primeFactors(106545645640));
